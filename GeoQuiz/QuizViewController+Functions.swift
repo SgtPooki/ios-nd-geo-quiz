@@ -194,7 +194,8 @@ extension QuizViewController {
             flagButton3.layer.borderWidth = 5
             repeatPhraseButton.setTitle("Start Quiz", forState: UIControlState.Normal)
         } else if newState == .ReadyToSpeak {
-            repeatPhraseButton.setTitle("Hear Phrase", forState: UIControlState.Normal)
+            speak(spokenText, languageCode: bcpCode)
+            repeatPhraseButton.setTitle("Hear Phrase Again", forState: UIControlState.Normal)
         } else if newState == .QuestionDisplayed {
             repeatPhraseButton.setTitle("Hear Phrase Again", forState: UIControlState.Normal)
         } else if newState == .PlayingAudio {
